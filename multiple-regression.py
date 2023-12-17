@@ -9,8 +9,8 @@ from sklearn.metrics import r2_score
 dataset = pd.read_csv('Data.csv')
 
 # Extracting features (X) and target variable (y) from the dataset
-X = dataset.iloc[:, :-1].values  # Selecting all rows and all but the last column as features
-y = dataset.iloc[:, -1].values  # Selecting all rows and only the last column as the target variable
+X = dataset.iloc[:, :-1].values  # All rows, all columns except the last one
+y = dataset.iloc[:, -1].values  # All rows, only the last column
 
 # Splitting the dataset into Training and Test sets
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2,
